@@ -24,11 +24,12 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('♚ Bᴏᴛ Oᴡɴᴇʀ ♚', callback_data="owner_info"),
-                    InlineKeyboardButton('⌬ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ ⌬', url=GRP_LNK)
+                    InlineKeyboardButton('♚ Oᴡɴᴇʀ ♚', callback_data="owner_info"),
+                    InlineKeyboardButton('⌬ Sᴜᴘᴘᴏʀᴛ Group ⌬', url=GRP_LNK)
                 ],[
                     InlineKeyboardButton('〄 Hᴇʟᴘ 〄', callback_data='help'),
-                    InlineKeyboardButton('⍟ Aʙᴏᴜᴛ ⍟', callback_data='about')
+                    InlineKeyboardButton('⍟ Aʙᴏᴜᴛ ⍟', callback_data='about'),
+                    InlineKeyboardButton('Iɴʟɪɴᴇ ☌', switch_inline_query_current_chat='')
                 ],[
                     InlineKeyboardButton('✇ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
                   ]]
@@ -52,11 +53,12 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('♚ Bᴏᴛ Oᴡɴᴇʀ ♚', callback_data="owner_info"),
+                    InlineKeyboardButton('♚ Oᴡɴᴇʀ ♚', callback_data="owner_info"),
                     InlineKeyboardButton('⌬ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ ⌬', url=GRP_LNK)
                 ],[
                     InlineKeyboardButton('〄 Hᴇʟᴘ 〄', callback_data='help'),
-                    InlineKeyboardButton('⍟ Aʙᴏᴜᴛ ⍟', callback_data='about')
+                    InlineKeyboardButton('⍟ Aʙᴏᴜᴛ ⍟', callback_data='about'),
+                    InlineKeyboardButton('Iɴʟɪɴᴇ ☌', switch_inline_query_current_chat='')
                 ],[
                     InlineKeyboardButton('✇ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
                   ]]
@@ -100,18 +102,19 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('♚ Bᴏᴛ Oᴡɴᴇʀ ♚', callback_data="owner_info"),
+                    InlineKeyboardButton('♚ Oᴡɴᴇʀ ♚', callback_data="owner_info"),
                     InlineKeyboardButton('⌬ Sᴜᴘᴘᴏʀᴛ ⌬', url=GRP_LNK)
                 ],[
                     InlineKeyboardButton('〄 Hᴇʟᴘ 〄', callback_data='help'),
-                    InlineKeyboardButton('⍟ Aʙᴏᴜᴛ ⍟', callback_data='about')
+                    InlineKeyboardButton('⍟ Aʙᴏᴜᴛ ⍟', callback_data='about'),
+                    InlineKeyboardButton('Iɴʟɪɴᴇ ☌', switch_inline_query_current_chat='')
                 ],[
-                    InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
+                    InlineKeyboardButton('✇ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
-            caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME)
+            caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
@@ -157,9 +160,11 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                          InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-                         ]   
+                          InlineKeyboardButton('⌬ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ ⌬', url=GRP_LNK),
+                          InlineKeyboardButton('〄 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 〄', url=CHNL_LNK)
+                       ],[
+                          InlineKeyboardButton('Iɴʟɪɴᴇ SEARCH ☌', switch_inline_query_current_chat='')
+                         ]
                         ]
                     )
                 )
@@ -174,10 +179,10 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                          InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                          InlineKeyboardButton('⌬ Sᴜᴘᴘᴏʀᴛ CHAT ⌬', url=GRP_LNK),
+                          InlineKeyboardButton('〄 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 〄', url=CHNL_LNK)
                        ],[
-                          InlineKeyboardButton('Iɴʟɪɴᴇ Sᴇᴀʀᴄʜ ☌', switch_inline_query_current_chat='')
+                          InlineKeyboardButton('Iɴʟɪɴᴇ SEARCH ☌', switch_inline_query_current_chat='')
                          ]
                         ]
                     )
@@ -293,10 +298,10 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                      InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                      InlineKeyboardButton('⌬ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ ⌬', url=GRP_LNK),
+                      InlineKeyboardButton('〄 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 〄', url=CHNL_LNK)
                    ],[
-                      InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/MALAYALI_DUDE")
+                      InlineKeyboardButton('Iɴʟɪɴᴇ SEARCH ☌', switch_inline_query_current_chat='')
                      ]
                     ]
                 )
@@ -347,10 +352,10 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
              [
-              InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-              InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+              InlineKeyboardButton(⌬ 'Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ ⌬', url=GRP_LNK),
+              InlineKeyboardButton('〄 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 〄', url=CHNL_LNK)
            ],[
-              InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/MALAYALI_DUDE")
+              InlineKeyboardButton('Iɴʟɪɴᴇ SEARCH ☌', switch_inline_query_current_chat='')
              ]
             ]
         )
@@ -848,3 +853,4 @@ async def shortlink(bot, message):
     await save_group_settings(grpid, 'shortlink_api', api)
     await save_group_settings(grpid, 'is_shortlink', True)
     await reply.edit_text(f"<b>Sᴜᴄᴄᴇssғᴜʟʟʏ ᴀᴅᴅᴇᴅ sʜᴏʀᴛʟɪɴᴋ API ғᴏʀ {title}.\n\nCᴜʀʀᴇɴᴛ Sʜᴏʀᴛʟɪɴᴋ Wᴇʙsɪᴛᴇ: <code>{shortlink_url}</code>\nCᴜʀʀᴇɴᴛ API: <code>{api}</code></b>")
+                      
